@@ -1,0 +1,99 @@
+{
+	"sap.app": {
+		"id": "sap.m.sample.OverflowToolbarFooter",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.m.sample.OverflowToolbarFooter.App",
+			"type": "XML",
+			"async": true
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"path": "sap.m.sample.OverflowToolbarFooter.views",
+				"controlId": "rootControl",
+				"controlAggregation": "pages",
+				"type": "View",
+				"viewType": "XML",
+				"async": true
+			},
+			"routes": [
+				{
+					"name": "products",
+					"pattern": "",
+					"target": "products"
+				},
+				{
+					"name": "details",
+					"pattern": "details/{id}",
+					"target": "details"
+				}
+			],
+			"targets": {
+				"products": {
+					"viewType": "XML",
+					"name": "Products"
+				},
+				"details": {
+					"viewType": "XML",
+					"name": "Details"
+				}
+			}
+		},
+		"dependencies": {
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {}
+			}
+		},
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"OverflowToolbar.view.xml",
+					"controller/Products.controller.js",
+					"manifest.json",
+					"Component.js",
+					"App.view.xml",
+					"RoutingFullscreen.html"
+				]
+			}
+		}
+	},
+	"routing": {
+		"config": {
+			"routerClass": "sap.m.routing.Router",
+			"type": "View",
+			"viewType": "XML",
+			"path": "Detail.view",
+			"controlId": "app",
+			"controlAggregation": "pages"
+		},
+		"routes": [
+			{
+				"pattern": "",
+				"name": "overview",
+				"target": "overview"
+			},
+			{
+				"pattern": "detail/{invoicePath}",
+				"name": "detail",
+				"target": "detail"
+			}
+		],
+		"targets": {
+			"overview": {
+				"id": "overview",
+				"name": "Overview"
+			},
+			"detail": {
+				"id": "detail",
+				"name": "Detail"
+			}
+		}
+	}
+}

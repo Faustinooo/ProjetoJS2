@@ -1,0 +1,21 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="sap.m.sample.OverflowToolbarFooter.controller.Details">
+	<Page
+		title="Details"
+		showNavButton="true"
+		navButtonPress="onBack">
+		<content>
+			<VBox>
+				<items>
+					<ObjectAttribute title="User ID"  id="userId" />
+					<ObjectAttribute title="ID"  id="id" />
+					<ObjectAttribute title="Title" id="title" />
+					<ObjectAttribute title="Completed"  id="completed" />
+				</items>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>
